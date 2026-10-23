@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #121111;
+    color: #e0e0e0;
+    min-height: 100vh;
+}
+
+/* ზედა ნავიგაციის ზოლი */
+.top-header {
+    background: #1a1919;
+    border-bottom: 1px solid #282626;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 28px;
+}
+
+.logo-box h2 {
+    color: #f39c12;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.sub-title {
+    font-size: 11px;
+    color: #777;
+}
+
+.table-selector-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #252323;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.table-selector-box label {
+    font-size: 13px;
+    color: #ccc;
+}
+
+.table-select {
+    background: #121111;
+    color: #f39c12;
+    border: 1px solid #444;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+/* მთავარი განლაგება */
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 25px;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* მენიუს ბადე */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.food-card {
+    background: #1a1919;
+    border: 1px solid #282626;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.2s;
+}
+
+.food-card:hover {
+    border-color: #3d3939;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rating {
+    font-size: 13px;
+    color: #f1c40f;
+    font-weight: 600;
+}
+
+.rating small {
+    color: #666;
+    font-weight: normal;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f39c12;
+}
+
+/* კერძების ფოტოები */
+.food-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.food-info h3 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.food-info p {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+/* მომხმარებლის შეფასების ბლოკი */
+.user-rating-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #222020;
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.rate-label {
+    font-size: 11px;
+    color: #aaa;
+}
+
+.stars-select {
+    display: flex;
+    gap: 3px;
+}
+
+.stars-select span {
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+
+.stars-select span:hover,
+.stars-select span.active {
+    color: #f1c40f;
+}
+
+.add-btn {
+    background: transparent;
+    border: 1px solid #333;
+    color: #f39c12;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    align-self: flex-start;
+    transition: 0.2s;
+    width: 100%;
+}
+
+.add-btn:hover {
+    background: #f39c12;
+    color: #121111;
+}
+
+/* მარჯვენა შეკვეთის ბარათი */
+.order-card {
+    background: #1a1919;
+    border: 1px solid #282626;
+    border-radius: 12px;
+    padding: 20px;
+    position: sticky;
+    top: 20px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #282626;
+}
+
+.order-header h3 {
+    font-size: 18px;
+    color: #fff;
+}
+
+.clear-all-btn {
+    background: transparent;
+    border: none;
+    color: #a05a5a;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.clear-all-btn:hover {
+    color: #e74c3c;
+}
+
+.order-items-list {
+    min-height: 120px;
+    max-height: 280px;
+    overflow-y: auto;
+    margin: 15px 0;
+}
+
+.empty-msg {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.item-title {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.item-price {
+    font-size: 14px;
+    color: #f39c12;
+    font-weight: 600;
+}
+
+.item-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.qty-btn {
+    background: #252323;
+    border: 1px solid #333;
+    color: #fff;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.qty-count {
+    font-size: 13px;
+}
+
+.remove-text-btn {
+    background: transparent;
+    border: none;
+    color: #a05a5a;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.order-time-box {
+    background: rgba(243, 156, 18, 0.1);
+    border: 1px solid rgba(243, 156, 18, 0.2);
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 13px;
+    color: #f39c12;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.billing-details {
+    border-top: 1px dashed #282626;
+    padding-top: 15px;
+}
+
+.bill-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 8px;
+}
+
+.bill-row.fee {
+    font-size: 12px;
+    color: #666;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #282626;
+    margin: 10px 0;
+}
+
+.bill-row.total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.bill-row.total span:last-child {
+    color: #f39c12;
+}
+
+.confirm-order-btn {
+    width: 100%;
+    background: #f39c12;
+    color: #121111;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.2s;
+}
+
+.confirm-order-btn:hover {
+    background: #e08e0b;
+}
+
+.disclaimer {
+    font-size: 11px;
+    color: #555;
+    text-align: center;
+    margin-top: 12px;
+}
+
+/* საკონტაქტო / Footer */
+.footer-contact {
+    background: #1a1919;
+    border-top: 1px solid #282626;
+    margin-top: 50px;
+    padding: 30px 20px 15px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.footer-block h4 {
+    color: #f39c12;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.footer-block p {
+    color: #999;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #222;
+    font-size: 12px;
+    color: #555;
+}

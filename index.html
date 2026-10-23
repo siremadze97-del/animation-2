@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Lounge | მენიუ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ზედა პანელი: ლოგო და მაგიდის არჩევა -->
+    <header class="top-header">
+        <div class="logo-box">
+            <span class="logo-icon">🍷</span>
+            <div>
+                <h2>GOURMET LOUNGE</h2>
+                <p class="sub-title">მაგიდიდან სწრაფი შეკვეთა</p>
+            </div>
+        </div>
+
+        <div class="table-selector-box">
+            <label for="tableSelect">📍 აირჩიეთ მაგიდა:</label>
+            <select id="tableSelect" class="table-select">
+                <option value="1">მაგიდა №1</option>
+                <option value="2">მაგიდა №2</option>
+                <option value="3">მაგიდა №3</option>
+                <option value="4">მაგიდა №4</option>
+                <option value="5" selected>მაგიდა №5</option>
+                <option value="6">მაგიდა №6</option>
+                <option value="7">მაგიდა №7</option>
+                <option value="8">მაგიდა №8</option>
+                <option value="9">მაგიდა №9</option>
+                <option value="10">მაგიდა №10</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="main-layout">
+        <!-- მენიუს სექცია -->
+        <section class="menu-section">
+            <div class="menu-grid">
+                
+                <!-- კერძი 1 -->
+                <div class="food-card">
+                    <div class="card-header">
+                        <span class="rating" id="rating-text-1">⭐ 4.9 <small>(128)</small></span>
+                        <span class="price">22.00 ₾</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&auto=format&fit=crop&q=60" alt="ბურგერი" class="food-img">
+                    <div class="food-info">
+                        <h3>პრემიუმ ბურგერი</h3>
+                        <p>ანგუსის ხორცი, ჩედარი, კარამელიზებული ხახვი</p>
+                    </div>
+                    <!-- ინტერაქტიული შეფასება -->
+                    <div class="user-rating-box">
+                        <span class="rate-label">შეაფასეთ:</span>
+                        <div class="stars-select" id="stars-1">
+                            <span onclick="rateFood(1, 1)">★</span>
+                            <span onclick="rateFood(1, 2)">★</span>
+                            <span onclick="rateFood(1, 3)">★</span>
+                            <span onclick="rateFood(1, 4)">★</span>
+                            <span onclick="rateFood(1, 5)">★</span>
+                        </div>
+                    </div>
+                    <button class="add-btn" onclick="addToOrder('პრემიუმ ბურგერი', 22.00)">+ დამატება</button>
+                </div>
+
+                <!-- კერძი 2 -->
+                <div class="food-card">
+                    <div class="card-header">
+                        <span class="rating" id="rating-text-2">⭐ 4.8 <small>(95)</small></span>
+                        <span class="price">26.50 ₾</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&auto=format&fit=crop&q=60" alt="პიცა" class="food-img">
+                    <div class="food-info">
+                        <h3>პიცა პეპერონი</h3>
+                        <p>მოცარელა, პიკანტური სალიამი, ორეგანო</p>
+                    </div>
+                    <div class="user-rating-box">
+                        <span class="rate-label">შეაფასეთ:</span>
+                        <div class="stars-select" id="stars-2">
+                            <span onclick="rateFood(2, 1)">★</span>
+                            <span onclick="rateFood(2, 2)">★</span>
+                            <span onclick="rateFood(2, 3)">★</span>
+                            <span onclick="rateFood(2, 4)">★</span>
+                            <span onclick="rateFood(2, 5)">★</span>
+                        </div>
+                    </div>
+                    <button class="add-btn" onclick="addToOrder('პიცა პეპერონი', 26.50)">+ დამატება</button>
+                </div>
+
+                <!-- კერძი 3 -->
+                <div class="food-card">
+                    <div class="card-header">
+                        <span class="rating" id="rating-text-3">⭐ 5.0 <small>(210)</small></span>
+                        <span class="price">18.00 ₾</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?w=500&auto=format&fit=crop&q=60" alt="ხინკალი" class="food-img">
+                    <div class="food-info">
+                        <h3>ხინკალი ქალაქური</h3>
+                        <p>საქონლისა და ღორის ხორცი, ახალი მწვანილი, შავი პილპილი</p>
+                    </div>
+                    <div class="user-rating-box">
+                        <span class="rate-label">შეაფასეთ:</span>
+                        <div class="stars-select" id="stars-3">
+                            <span onclick="rateFood(3, 1)">★</span>
+                            <span onclick="rateFood(3, 2)">★</span>
+                            <span onclick="rateFood(3, 3)">★</span>
+                            <span onclick="rateFood(3, 4)">★</span>
+                            <span onclick="rateFood(3, 5)">★</span>
+                        </div>
+                    </div>
+                    <button class="add-btn" onclick="addToOrder('ხინკალი ქალაქური', 18.00)">+ დამატება</button>
+                </div>
+
+                <!-- კერძი 4 -->
+                <div class="food-card">
+                    <div class="card-header">
+                        <span class="rating" id="rating-text-4">⭐ 4.9 <small>(164)</small></span>
+                        <span class="price">19.50 ₾</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1608897013039-887f21d8c804?w=500&auto=format&fit=crop&q=60" alt="ხაჭაპური" class="food-img">
+                    <div class="food-info">
+                        <h3>აჭარული ხაჭაპური</h3>
+                        <p>ღუმელში გამოცხობილი ცომი, ყველი და კვერცხი</p>
+                    </div>
+                    <div class="user-rating-box">
+                        <span class="rate-label">შეაფასეთ:</span>
+                        <div class="stars-select" id="stars-4">
+                            <span onclick="rateFood(4, 1)">★</span>
+                            <span onclick="rateFood(4, 2)">★</span>
+                            <span onclick="rateFood(4, 3)">★</span>
+                            <span onclick="rateFood(4, 4)">★</span>
+                            <span onclick="rateFood(4, 5)">★</span>
+                        </div>
+                    </div>
+                    <button class="add-btn" onclick="addToOrder('აჭარული ხაჭაპური', 19.50)">+ დამატება</button>
+                </div>
+
+                <!-- კერძი 5 -->
+                <div class="food-card">
+                    <div class="card-header">
+                        <span class="rating" id="rating-text-5">⭐ 4.7 <small>(82)</small></span>
+                        <span class="price">16.00 ₾</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?w=500&auto=format&fit=crop&q=60" alt="რიზოტო" class="food-img">
+                    <div class="food-info">
+                        <h3>სოკოს რიზოტო</h3>
+                        <p>არბორიოს ბრინჯი, სოკო, პარმეზანი და მწვანილი</p>
+                    </div>
+                    <div class="user-rating-box">
+                        <span class="rate-label">შეაფასეთ:</span>
+                        <div class="stars-select" id="stars-5">
+                            <span onclick="rateFood(5, 1)">★</span>
+                            <span onclick="rateFood(5, 2)">★</span>
+                            <span onclick="rateFood(5, 3)">★</span>
+                            <span onclick="rateFood(5, 4)">★</span>
+                            <span onclick="rateFood(5, 5)">★</span>
+                        </div>
+                    </div>
+                    <button class="add-btn" onclick="addToOrder('სოკოს რიზოტო', 16.00)">+ დამატება</button>
+                </div>
+
+                <!-- კერძი 6 -->
+                <div class="food-card">
+                    <div class="card-header">
+                        <span class="rating" id="rating-text-6">⭐ 4.9 <small>(110)</small></span>
+                        <span class="price">12.00 ₾</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&auto=format&fit=crop&q=60" alt="ტარტი" class="food-img">
+                    <div class="food-info">
+                        <h3>შოკოლადის ტარტი</h3>
+                        <p>შავი შოკოლადი, კაკაოს ცომი და სეზონური კენკრა</p>
+                    </div>
+                    <div class="user-rating-box">
+                        <span class="rate-label">შეაფასეთ:</span>
+                        <div class="stars-select" id="stars-6">
+                            <span onclick="rateFood(6, 1)">★</span>
+                            <span onclick="rateFood(6, 2)">★</span>
+                            <span onclick="rateFood(6, 3)">★</span>
+                            <span onclick="rateFood(6, 4)">★</span>
+                            <span onclick="rateFood(6, 5)">★</span>
+                        </div>
+                    </div>
+                    <button class="add-btn" onclick="addToOrder('შოკოლადის ტარტი', 12.00)">+ დამატება</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- შეკვეთის / კალათის სექცია -->
+        <aside class="order-section">
+            <div class="order-card">
+                <div class="order-header">
+                    <h3>თქვენი შეკვეთა</h3>
+                    <button class="clear-all-btn" onclick="clearAllOrders()">კალათის გასუფთავება</button>
+                </div>
+
+                <div class="order-items-list" id="orderList">
+                    <p class="empty-msg">შეკვეთა ცარიელია</p>
+                </div>
+
+                <div id="orderTimeBox" class="order-time-box" style="display: none;">
+                    <div>📍 <span id="orderTableVal">მაგიდა №5</span></div>
+                    <div>🕒 <strong id="orderTimeVal">--:--</strong></div>
+                </div>
+
+                <div class="billing-details">
+                    <div class="bill-row">
+                        <span>შუალედური ჯამი</span>
+                        <span id="subtotalVal">0.00 ₾</span>
+                    </div>
+                    <div class="bill-row fee">
+                        <span>სერვისის გადასახადი</span>
+                        <span>არ ემატება</span>
+                    </div>
+                    <hr class="divider">
+                    <div class="bill-row total">
+                        <span>სულ</span>
+                        <span id="grandTotalVal">0.00 ₾</span>
+                    </div>
+                </div>
+
+                <button class="confirm-order-btn" onclick="checkoutOrder()">შეკვეთის გაგრძელება</button>
+                <p class="disclaimer">ეს გვერდი დემოა: შეკვეთა იგზავნება პირდაპირ სამზარეულოში.</p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- საკონტაქტო და მისამართის ბლოკი (Footer) -->
+    <footer class="footer-contact">
+        <div class="footer-container">
+            <div class="footer-block">
+                <h4>📍 მისამართი</h4>
+                <p>თბილისი, რუსთაველის გამზირი N12</p>
+                <p>საქართველო</p>
+            </div>
+            <div class="footer-block">
+                <h4>📞 საკონტაქტო</h4>
+                <p>ტელეფონი: +995 32 2 123 456</p>
+                <p>ელ.ფოსტა: info@gourmetlounge.ge</p>
+            </div>
+            <div class="footer-block">
+                <h4>⏰ სამუშაო საათები</h4>
+                <p>ორშაბათი - კვირა</p>
+                <p>11:00 - 23:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Gourmet Lounge. ყველა უფლება დაცულია.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
